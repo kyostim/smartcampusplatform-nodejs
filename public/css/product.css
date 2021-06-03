@@ -1,0 +1,27 @@
+.thing-form {
+    width: 20rem;
+    max-width: 90%;
+    margin: auto;
+    display: block;
+}
+
+.thing-item {
+    width: 20rem;
+    max-width: 95%;
+    margin: 1rem;
+}
+
+.thing__name {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.thing__price {
+    text-align: center;
+    color: #4d4d4d;
+    margin-bottom: 0.5rem;
+}
+
+.thing__description {
+    text-align: center;
+}

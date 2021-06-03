@@ -1,0 +1,22 @@
+<%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/forms.css">
+    <link rel="stylesheet" href="/css/thing.css">
+</head>
+
+<body>
+   <%- include('../includes/navigation.ejs') %>
+
+    <main>
+        <form class="thing-form" action="/admin/<% if (editing) { %>edit-thing<% } else { %>add-thing<% } %>" method="POST">
+            <div class="form-control">
+                <label for="name">name</label>
+                <input type="text" name="name" id="name" value="<% if (editing) { %><%= thing.name %><% } %>">
+            </div>
+            <% if (editing) { %>
+                <input type="hidden" value="<%= thing.id %>" name="thingId">
+            <% } %>
+
+            <button class="btn" type="submit"><% if (editing) { %>Update Thing<% } else { %>Add Thing<% } %></button>
+        </form>
+    </main>
+<%- include('../includes/end.ejs') %>
